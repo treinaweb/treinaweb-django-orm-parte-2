@@ -91,6 +91,18 @@
     "pais": "Brasil"
   }
 },
+  {
+  "model": "clientes.endereco",
+  "pk": 2,
+  "fields": {
+    "rua": "Rua M",
+    "numero": 10,
+    "complemento": "Pr\u00f3ximo ao Supermercado Barato",
+    "bairro": "Centro",
+    "cidade": "São Paulo",
+    "pais": "Brasil"
+  }
+},
 {
   "model": "clientes.produto",
   "pk": 1,
@@ -98,6 +110,15 @@
     "nome": "Pizza de Calabresa",
     "descricao": "Muita calabresa",
     "valor": 50.0
+  }
+},
+  {
+  "model": "clientes.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Pizza de Presunto",
+    "descricao": "Muito presunto",
+    "valor": 60.0
   }
 },
 {
@@ -124,6 +145,18 @@
     "profissao": "Programador",
     "sexo": "M",
     "endereco": 1
+  }
+},
+  {
+  "model": "clientes.cliente",
+  "pk": 2,
+  "fields": {
+    "nome": "Maria",
+    "data_nascimento": "1990-01-01",
+    "email": "maria@mail.com",
+    "profissao": "Programador",
+    "sexo": "F",
+    "endereco": 2
   }
 }
 ]
