@@ -1,0 +1,129 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "clientes",
+    "model": "cliente"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "clientes",
+    "model": "endereco"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "clientes",
+    "model": "pedido"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "clientes",
+    "model": "produto"
+  }
+},
+{
+  "model": "clientes.endereco",
+  "pk": 1,
+  "fields": {
+    "rua": "Rua J",
+    "numero": 10,
+    "complemento": "Pr\u00f3ximo ao Supermercado Barato",
+    "bairro": "Centro",
+    "cidade": "Recife",
+    "pais": "Brasil"
+  }
+},
+{
+  "model": "clientes.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "Pizza de Calabresa",
+    "descricao": "Muita calabresa",
+    "valor": 50.0
+  }
+},
+{
+  "model": "clientes.pedido",
+  "pk": 1,
+  "fields": {
+    "cliente": 1,
+    "data_pedido": "2019-04-29T12:41:34Z",
+    "valor": 50.0,
+    "status": "P",
+    "observacoes": "Sem cebola",
+    "produtos": [
+      1
+    ]
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 1,
+  "fields": {
+    "nome": "Jo\u00e3o",
+    "data_nascimento": "1990-01-01",
+    "email": "joao@mail.com",
+    "profissao": "Programador",
+    "sexo": "M",
+    "endereco": 1
+  }
+}
+]

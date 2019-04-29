@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object model="contenttypes.contenttype" pk="1">
+    <field name="app_label" type="CharField">admin</field>
+    <field name="model" type="CharField">logentry</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="2">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">permission</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="3">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">group</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="4">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">user</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="5">
+    <field name="app_label" type="CharField">contenttypes</field>
+    <field name="model" type="CharField">contenttype</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="6">
+    <field name="app_label" type="CharField">sessions</field>
+    <field name="model" type="CharField">session</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="7">
+    <field name="app_label" type="CharField">clientes</field>
+    <field name="model" type="CharField">cliente</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="8">
+    <field name="app_label" type="CharField">clientes</field>
+    <field name="model" type="CharField">endereco</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="9">
+    <field name="app_label" type="CharField">clientes</field>
+    <field name="model" type="CharField">pedido</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="10">
+    <field name="app_label" type="CharField">clientes</field>
+    <field name="model" type="CharField">produto</field>
+  </object>
+  <object model="clientes.endereco" pk="1">
+    <field name="rua" type="CharField">Rua J</field>
+    <field name="numero" type="IntegerField">10</field>
+    <field name="complemento" type="CharField">Próximo ao Supermercado Barato</field>
+    <field name="bairro" type="CharField">Centro</field>
+    <field name="cidade" type="CharField">Recife</field>
+    <field name="pais" type="CharField">Brasil</field>
+  </object>
+  <object model="clientes.produto" pk="1">
+    <field name="nome" type="CharField">Pizza de Calabresa</field>
+    <field name="descricao" type="CharField">Muita calabresa</field>
+    <field name="valor" type="FloatField">50.0</field>
+  </object>
+  <object model="clientes.pedido" pk="1">
+    <field name="cliente" rel="ManyToOneRel" to="clientes.cliente">1</field>
+    <field name="data_pedido" type="DateTimeField">2019-04-29T12:41:34+00:00</field>
+    <field name="valor" type="FloatField">50.0</field>
+    <field name="status" type="CharField">P</field>
+    <field name="observacoes" type="CharField">Sem cebola</field>
+    <field name="produtos" rel="ManyToManyRel" to="clientes.produto"><object pk="1"></object></field>
+  </object>
+  <object model="clientes.cliente" pk="1">
+    <field name="nome" type="CharField">João</field>
+    <field name="data_nascimento" type="DateField">1990-01-01</field>
+    <field name="email" type="CharField">joao@mail.com</field>
+    <field name="profissao" type="CharField">Programador</field>
+    <field name="sexo" type="CharField">M</field>
+    <field name="endereco" rel="OneToOneRel" to="clientes.endereco">1</field>
+  </object>
+</django-objects>
