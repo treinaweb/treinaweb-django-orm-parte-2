@@ -13,7 +13,7 @@ def remover_cliente(cliente):
     cliente.delete()
 
 def cadastrar_cliente(cliente):
-    Cliente.objects.create(nome=cliente.nome, sexo=cliente.sexo, data_nascimento=cliente.data_nascimento,
+    Cliente.objects.create(nome=cliente.nome, sobrenome=cliente.sobrenome, sexo=cliente.sexo, data_nascimento=cliente.data_nascimento,
                            email=cliente.email, profissao=cliente.profissao, endereco=cliente.endereco)
 
 def editar_cliente(cliente, cliente_novo):
@@ -22,6 +22,7 @@ def editar_cliente(cliente, cliente_novo):
     #     nome = "'Carlos' , email = 'ana@mail.com'"
     #     cursor.execute(f"UPDATE clientes_cliente SET nome={nome} WHERE id=2")
     cliente.nome = cliente_novo.nome
+    cliente.sobrenome = cliente_novo.sobrenome
     cliente.sexo = cliente_novo.sexo
     cliente.data_nascimento = cliente_novo.data_nascimento
     cliente.email = cliente_novo.email
