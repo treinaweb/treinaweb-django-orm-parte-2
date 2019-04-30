@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.cache import cache_page
 
 from clientes.forms.endereco_forms import EnderecoForm
 from clientes.forms.cliente_forms import ClienteForm
@@ -7,6 +8,7 @@ from clientes.services import cliente_service, endereco_service
 
 # Create your views here.
 
+@cache_page(60)
 def listar_clientes(request):
     clientes = cliente_service.listar_clientes()
     return render(request, 'clientes/lista_clientes.html', {'clientes': clientes})
