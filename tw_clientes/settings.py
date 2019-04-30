@@ -98,10 +98,17 @@ DATABASES = {
 #     }
 # }
 
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+#         'LOCATION': 'tabela_cache',
+#     }
+# }
+
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'tabela_cache',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/Users/fagnerpsantos/Desktop/django_cache',
     }
 }
 
