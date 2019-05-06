@@ -68,6 +68,7 @@ class Cliente(models.Model):
 
     class Meta:
         db_table = "cliente_sistema"
+        ordering = ['-data_nascimento']
 
     def __str__(self):
         return self.nome
