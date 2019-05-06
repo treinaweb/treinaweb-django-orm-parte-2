@@ -2,7 +2,7 @@ from ..models import Cliente
 from django.db import connection
 
 def listar_clientes():
-    clientes = Cliente.objects.all()
+    clientes = Cliente.objects.filter(sexo='F').all()
     return clientes
 
 def listar_cliente_id(id):
