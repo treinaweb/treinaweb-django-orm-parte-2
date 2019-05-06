@@ -66,5 +66,8 @@ class Cliente(models.Model):
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, blank=False, null=False)
     endereco = models.OneToOneField(Endereco, on_delete=models.SET_NULL, null=True)
 
+    class Meta:
+        db_table = "cliente_sistema"
+
     def __str__(self):
         return self.nome
