@@ -71,3 +71,7 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Funcionario(models.Model):
+    id_funcionario = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=50, null=False, blank=False)
