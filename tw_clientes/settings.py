@@ -76,27 +76,36 @@ WSGI_APPLICATION = 'tw_clientes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+DATABASES = {
+    'default': {},
+    'escrita': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'django_orm_escrita',
+            'USER': 'root',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': '3306'
+    },
+    'leitura': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'django_orm',
+            'USER': 'root',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': '3306'
+    },
+}
+
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'django_orm',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
+#         'USER': 'fagnerpsantos',
+#         'PASSWORD': '',
 #         'HOST': 'localhost',
-#         'PORT': '3306'
+#         'PORT': '5432'
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_orm',
-        'USER': 'fagnerpsantos',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-}
 
 # CACHES = {
 #     'default': {
