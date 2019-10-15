@@ -1,4 +1,4 @@
-#### # TreinaWeb: curso "Django - ORM - Parte 2"
+#### TreinaWeb: curso "Django - ORM - Parte 2"
 
 Repositório com o código produzido durante o curso "Django - ORM - Parte 2".
 
